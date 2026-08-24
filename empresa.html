@@ -9,75 +9,65 @@
         tailwind.config = { theme: { extend: { colors: { verde: { escuro: '#2C5E2A', claro: '#6EB936' }, azul: { topo: '#0B1E36' } } } } }
     </script>
 </head>
-<body class="font-sans antialiased text-gray-800 bg-gray-50 overflow-x-hidden">
+<body class="font-sans antialiased text-gray-800 bg-gray-50">
 
-    <div class="bg-azul-topo text-white text-sm py-2 px-6 md:px-12 flex flex-col md:flex-row justify-end items-center gap-4">
-        <div class="flex items-center gap-2"><span>📞+55 (98)98400-0545 📞+55 (98)98436-5611</span></div>
-        <div class="flex items-center gap-2"><span>✉️ jordan.monteles@hotmail.com</span></div>
-    </div>
-
-    <!-- Navegação compactada para leitura (Igual às outras) -->
-    <nav class="bg-white shadow-md relative z-50">
-        <div class="container mx-auto px-6 md:px-12 py-4 flex justify-between items-center">
-            <a href="index.html"><img src="static/img/WhatsApp Image 2026-08-21 at 15.38.13.jpeg" alt="Logo" class="h-20 md:h-24 object-contain transition-transform hover:scale-105"></a>
-            <button onclick="toggleMobileMenu()" class="md:hidden text-verde-escuro focus:outline-none"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
-            <ul id="nav-links" class="hidden absolute top-full left-0 w-full bg-white shadow-md md:shadow-none md:static md:w-auto md:bg-transparent md:flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 space-x-0 md:space-x-8 text-gray-700 font-medium text-lg p-6 md:p-0 border-t md:border-none">
-                <li class="w-full md:w-auto"><button onclick="toggleMenu('menu-empresa')" class="w-full flex justify-between items-center text-verde-claro">A Empresa <span class="ml-1 text-xs">▼</span></button></li>
-                <li class="w-full md:w-auto"><button onclick="toggleMenu('menu-solucoes')" class="w-full flex justify-between items-center hover:text-verde-claro transition-colors">Nossas Soluções <span class="ml-1 text-xs">▼</span></button></li>
-                <li class="w-full md:w-auto"><a href="contato.html" class="block w-full hover:text-verde-claro transition-colors">Contato</a></li>
-            </ul>
+    <!-- Cabeçalho Fixo no Topo -->
+    <header class="sticky top-0 z-50 w-full shadow-md">
+        <div class="bg-azul-topo text-white text-sm py-2 px-6 md:px-12 flex flex-col md:flex-row justify-end items-center gap-4">
+            <div class="flex items-center gap-2"><span>📞 +55 (98) 98400-0545 | +55 (98) 98436-5611</span></div>
+            <div class="flex items-center gap-2"><span>✉️ jordan.monteles@hotmail.com</span></div>
         </div>
-        <div id="menu-empresa" class="hidden absolute w-full bg-white shadow-lg border-t border-gray-100 left-0"><div class="container mx-auto px-6 md:px-12 py-8 grid grid-cols-1 md:grid-cols-2 gap-8"><div><h4 class="text-verde-claro font-bold mb-4 border-b pb-2">Institucional</h4><ul class="space-y-2 text-gray-600 text-base"><li><a href="#quem-somos" class="hover:text-verde-escuro block py-1">Quem Somos</a></li><li><a href="#missao" class="hover:text-verde-escuro block py-1">Missão, Visão e Valores</a></li></ul></div></div></div>
-        <div id="menu-solucoes" class="hidden absolute w-full bg-white shadow-lg border-t border-gray-100 left-0"><div class="container mx-auto px-6 md:px-12 py-8 grid grid-cols-1 md:grid-cols-2 gap-8"><div><h4 class="text-verde-claro font-bold mb-4 border-b pb-2">Madeira e Biomassa</h4><ul class="space-y-2 text-gray-600 text-base"><li><a href="solucoes.html" class="hover:text-verde-escuro block py-1">Ver todas as soluções</a></li></ul></div></div></div>
-    </nav>
 
-<header class="bg-verde-escuro text-white text-center py-16">
-        <div class="container mx-auto px-6 reveal opacity-0 translate-y-10 transition-all duration-700 ease-out">
-            <h1 class="text-3xl md:text-5xl font-bold mb-4">A Empresa</h1>
-            <p class="text-lg md:text-xl text-gray-200">Nossa história, missão e compromisso com o futuro.</p>
-        </div>
+        <nav class="bg-white relative">
+            <div class="container mx-auto px-6 md:px-12 py-4 flex justify-between items-center">
+                <a href="index.html"><img src="static/img/WhatsApp Image 2026-08-21 at 15.38.13.jpeg" alt="Logo" class="h-20 md:h-24 object-contain transition-transform hover:scale-105"></a>
+                <button onclick="toggleMobileMenu()" class="md:hidden text-verde-escuro focus:outline-none"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+                <ul id="nav-links" class="hidden absolute top-full left-0 w-full bg-white shadow-md md:shadow-none md:static md:w-auto md:bg-transparent md:flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 space-x-0 md:space-x-8 text-gray-700 font-medium text-lg p-6 md:p-0 border-t md:border-none">
+                    <li class="w-full md:w-auto"><button onclick="toggleMenu('menu-empresa')" class="w-full flex justify-between items-center hover:text-verde-claro transition-colors text-verde-clrio">A Empresa <span class="ml-1 text-xs">▼</span></button></li>
+                    <li class="w-full md:w-auto"><button onclick="toggleMenu('menu-solucoes')" class="w-full flex justify-between items-center hover:text-verde-claro transition-colors">Nossas Soluções <span class="ml-1 text-xs">▼</span></button></li>
+                    <li class="w-full md:w-auto"><a href="contato.html" class="block w-full hover:text-verde-claro">Contato</a></li>
+                </ul>
+            </div>
+            <div id="menu-empresa" class="hidden absolute w-full bg-white shadow-lg border-t border-gray-100 left-0"><div class="container mx-auto px-6 md:px-12 py-8 grid grid-cols-1 md:grid-cols-2 gap-8"><div><h4 class="text-verde-claro font-bold mb-4 border-b pb-2">Institucional</h4><ul class="space-y-2 text-gray-600 text-base"><li><a href="empresa.html#quem-somos" class="hover:text-verde-escuro block py-1">Quem Somos</a></li><li><a href="empresa.html#missao" class="hover:text-verde-escuro block py-1">Missão, Visão e Valores</a></li></ul></div></div></div>
+            <div id="menu-solucoes" class="hidden absolute w-full bg-white shadow-lg border-t border-gray-100 left-0"><div class="container mx-auto px-6 md:px-12 py-8 grid grid-cols-1 md:grid-cols-2 gap-8"><div><h4 class="text-verde-claro font-bold mb-4 border-b pb-2">Madeira e Biomassa</h4><ul class="space-y-2 text-gray-600 text-base"><li><a href="solucoes.html" class="hover:text-verde-escuro block py-1">Ver todas as soluções</a></li></ul></div></div></div>
+        </nav>
     </header>
 
-    <section id="quem-somos" class="py-16 md:py-20 bg-white overflow-hidden">
-        <div class="container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center gap-12">
-            <!-- Imagem animada -->
-            <div class="md:w-1/2 w-full reveal opacity-0 translate-y-10 transition-all duration-700 ease-out">
-                <img src="static/img/WhatsApp Image 2026-08-24 at 15.54.57.jpeg" alt="Sede Erick Reflorestamento" class="w-full h-[350px] md:h-[400px] object-cover rounded-lg shadow-md border border-gray-200">
-            </div>
-            <!-- Texto animado com delay -->
-            <div class="md:w-1/2 w-full reveal opacity-0 translate-y-10 transition-all duration-700 ease-out" style="transition-delay: 200ms;">
-                <h2 class="text-3xl font-bold text-verde-escuro mb-6">Quem Somos</h2>
-                <p class="text-gray-700 leading-relaxed mb-4 text-lg">Com excelência na produção e comercialização de madeira, o <strong>Grupo Erick Reflorestamento</strong> é referência no fornecimento de eucalipto, cavaco e derivados para a indústria e o agronegócio.</p>
-                <p class="text-gray-700 leading-relaxed text-lg">Nossa atuação é pautada pelo respeito ao meio ambiente e pelo manejo sustentável, garantindo que nossas operações contribuam ativamente para a conservação ambiental.</p>
+    <!-- Seção Principal / Quem Somos -->
+    <div id="quem-somos" class="bg-verde-escuro text-white text-center py-16">
+        <div class="container mx-auto px-6 reveal opacity-0 translate-y-10 transition-all duration-700 ease-out">
+            <h1 class="text-3xl md:text-5xl font-bold mb-4">Quem Somos</h1>
+            <p class="text-lg md:text-xl text-gray-200">Tradição, sustentabilidade e excelência no fornecimento de madeira e biomassa.</p>
+        </div>
+    </div>
+
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="max-w-4xl mx-auto text-gray-700 space-y-6 text-lg">
+                <p>A <strong>Erick Reflorestamento</strong> atua com forte presença no mercado de manejo sustentável, comercialização de madeira e fornecimento de biomassa para indústrias e o agronegócio.</p>
+                <p>Nosso compromisso é aliar a alta produtividade ao respeito rigoroso ao meio ambiente, garantindo produtos de altíssima qualidade que atendem às demandas mais exigentes do mercado energético e madeireiro.</p>
             </div>
         </div>
     </section>
 
-    <section id="missao" class="py-16 bg-gray-50 overflow-hidden">
+    <!-- Seção Missão, Visão e Valores -->
+    <section id="missao" class="py-16 bg-gray-50 border-t border-gray-100">
         <div class="container mx-auto px-6 md:px-12">
-            <div class="text-center mb-12 reveal opacity-0 translate-y-10 transition-all duration-700 ease-out">
-                <h2 class="text-3xl md:text-4xl font-bold text-verde-escuro mb-4">Nossos Pilares</h2>
-                <div class="w-24 h-1 bg-verde-claro mx-auto rounded"></div>
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-verde-escuro">Missão, Visão e Valores</h2>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100 transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl reveal opacity-0 translate-y-10" style="transition-delay: 100ms;">
-                    <div class="w-16 h-16 bg-verde-claro/10 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">🌱</div>
-                    <h3 class="text-2xl font-bold text-verde-escuro mb-4">Nossa Missão</h3>
-                    <p class="text-gray-600 text-base">Fornecer soluções em madeira e biomassa com alta qualidade e eficiência, promovendo o manejo florestal responsável.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
+                    <h3 class="text-xl font-bold text-verde-claro mb-4">Missão</h3>
+                    <p class="text-gray-600">Fornecer soluções eficientes em madeira e biomassa com responsabilidade ambiental e foco total na satisfação dos nossos parceiros e clientes industriais.</p>
                 </div>
-                <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100 transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl reveal opacity-0 translate-y-10" style="transition-delay: 250ms;">
-                    <div class="w-16 h-16 bg-verde-claro/10 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">👁️</div>
-                    <h3 class="text-2xl font-bold text-verde-escuro mb-4">Nossa Visão</h3>
-                    <p class="text-gray-600 text-base">Ser reconhecida como a principal fornecedora de derivados de eucalipto, liderando em inovação e governança socioambiental.</p>
+                <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
+                    <h3 class="text-xl font-bold text-verde-claro mb-4">Visão</h3>
+                    <p class="text-gray-600">Ser referência regional e nacional em reflorestamento e comercialização sustentável, reconhecida pela inovação e idoneidade comercial.</p>
                 </div>
-                <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100 transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl reveal opacity-0 translate-y-10" style="transition-delay: 400ms;">
-                    <div class="w-16 h-16 bg-verde-claro/10 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">🤝</div>
-                    <h3 class="text-2xl font-bold text-verde-escuro mb-4">Nossos Valores</h3>
-                    <ul class="text-gray-600 text-base space-y-2 text-left w-max mx-auto">
-                        <li><span class="text-verde-claro mr-2">✓</span>Sustentabilidade</li>
-                        <li><span class="text-verde-claro mr-2">✓</span>Ética e Transparência</li>
-                        <li><span class="text-verde-claro mr-2">✓</span>Foco em Qualidade</li>
-                    </ul>
+                <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
+                    <h3 class="text-xl font-bold text-verde-claro mb-4">Valores</h3>
+                    <p class="text-gray-600">Sustentabilidade, transparência nas relações, compromisso com prazos, ética profissional e respeito à natureza.</p>
                 </div>
             </div>
         </div>
