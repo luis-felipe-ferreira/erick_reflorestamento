@@ -13,14 +13,14 @@
 
     <!-- Cabeçalho Fixo no Topo -->
     <header class="sticky top-0 z-50 w-full shadow-md">
-        <div class="bg-azul-topo text-white text-sm py-2 px-6 md:px-12 flex flex-col md:flex-row justify-end items-center gap-4">
-            <div class="flex items-center gap-2"><span>📞+55 (98)98400-0545 📞+55 (98)98436-5611</span></div>
+        <div class="bg-azul-topo text-white text-xs md:text-sm py-2 px-4 md:px-12 flex flex-col md:flex-row justify-between md:justify-end items-center gap-2 md:gap-4 border-b border-blue-900 md:border-none">
+            <div class="flex items-center gap-2"><span>📞 +55 (98) 98400-0545 | +55 (98) 98436-5611</span></div>
             <div class="flex items-center gap-2"><span>✉️ jordan.monteles@hotmail.com</span></div>
         </div>
 
         <nav class="bg-white relative">
-            <div class="container mx-auto px-6 md:px-12 py-4 flex justify-between items-center">
-                <a href="index.html"><img src="static/img/WhatsApp Image 2026-08-21 at 15.38.13.jpeg" alt="Logo" class="h-20 md:h-24 object-contain transition-transform hover:scale-105"></a>
+            <div class="container mx-auto px-4 md:px-12 py-3 md:py-4 flex justify-between items-center">
+                <a href="index.html"><img src="static/img/WhatsApp Image 2026-08-21 at 15.38.13.jpeg" alt="Logo" class="h-16 md:h-24 object-contain transition-transform hover:scale-105"></a>
                 <button onclick="toggleMobileMenu()" class="md:hidden text-verde-escuro focus:outline-none"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
                 <ul id="nav-links" class="hidden absolute top-full left-0 w-full bg-white shadow-md md:shadow-none md:static md:w-auto md:bg-transparent md:flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 space-x-0 md:space-x-8 text-gray-700 font-medium text-lg p-6 md:p-0 border-t md:border-none">
                     <li class="w-full md:w-auto"><button onclick="toggleMenu('menu-empresa')" class="w-full flex justify-between items-center hover:text-verde-claro transition-colors">A Empresa <span class="ml-1 text-xs">▼</span></button></li>
@@ -33,26 +33,26 @@
         </nav>
     </header>
 
-    <div class="bg-verde-escuro text-white text-center py-16">
+    <div class="bg-verde-escuro text-white text-center py-10 md:py-16">
         <div class="container mx-auto px-6 reveal opacity-0 translate-y-10 transition-all duration-700 ease-out">
-            <h1 class="text-3xl md:text-5xl font-bold mb-4">Nossas Soluções</h1>
-            <p class="text-lg md:text-xl text-gray-200">Matéria-prima de excelência com garantia de origem.</p>
+            <h1 class="text-2xl md:text-5xl font-bold mb-2 md:mb-4">Nossas Soluções</h1>
+            <p class="text-sm md:text-xl text-gray-200">Matéria-prima de excelência com garantia de origem.</p>
         </div>
     </div>
 
-    <section id="produtos" class="py-20 bg-white overflow-hidden">
+    <section id="produtos" class="py-10 md:py-20 bg-white overflow-hidden">
         <div class="container mx-auto px-6 md:px-12">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
                 
-                <!-- Produto 1: Eucalipto com Efeitos -->
+                <!-- Produto 1 -->
                 <div class="flex flex-col bg-gray-50 rounded-lg overflow-hidden border border-gray-100 shadow-sm transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl reveal opacity-0 translate-y-10" style="transition-delay: 100ms;">
-                    <div class="h-56 bg-gray-200 flex items-center justify-center text-gray-400 overflow-hidden">
-                        <span class="transform transition-transform duration-700 hover:scale-110"><img src="https://images.unsplash.com/photo-1567080586917-e6ab6aa0df85?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="foto-de-madeira"></span>
+                    <div class="h-48 md:h-56 bg-gray-200 flex items-center justify-center text-gray-400 overflow-hidden">
+                        <span class="w-full h-full transform transition-transform duration-700 hover:scale-110"><img src="https://images.unsplash.com/photo-1567080586917-e6ab6aa0df85?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="foto-de-madeira" class="w-full h-full object-cover"></span>
                     </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-bold text-verde-escuro mb-3">Madeira de Eucalipto</h3>
-                        <p class="text-gray-600 leading-relaxed mb-6 text-lg">Toras de eucalipto in natura ou tratadas, cultivadas sob rigoroso controle de qualidade. Ideais para construção civil, agronegócio (cercas, currais) e indústrias de base.</p>
-                        <ul class="text-base text-gray-600 space-y-2">
+                    <div class="p-6 md:p-8">
+                        <h3 class="text-xl md:text-2xl font-bold text-verde-escuro mb-3">Madeira de Eucalipto</h3>
+                        <p class="text-gray-600 leading-relaxed mb-6 text-base md:text-lg">Toras de eucalipto in natura ou tratadas, cultivadas sob rigoroso controle de qualidade. Ideais para construção civil, agronegócio (cercas, currais) e indústrias de base.</p>
+                        <ul class="text-sm md:text-base text-gray-600 space-y-2">
                             <li><span class="text-verde-claro font-bold mr-2">✓</span>Alta resistência mecânica</li>
                             <li><span class="text-verde-claro font-bold mr-2">✓</span>Manejo 100% sustentável</li>
                             <li><span class="text-verde-claro font-bold mr-2">✓</span>Cortes padronizados sob demanda</li>
@@ -60,15 +60,15 @@
                     </div>
                 </div>
 
-                <!-- Produto 2: Cavaco com Efeitos -->
+                <!-- Produto 2 -->
                 <div class="flex flex-col bg-gray-50 rounded-lg overflow-hidden border border-gray-100 shadow-sm transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl reveal opacity-0 translate-y-10" style="transition-delay: 300ms;">
-                    <div class="h-56 bg-gray-200 flex items-center justify-center text-gray-400 overflow-hidden">
-                        <span class="transform transition-transform duration-700 hover:scale-110"><img src="https://images.unsplash.com/photo-1553002929-6bd5e66ad04a?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="foto-cavaco"></span>
+                    <div class="h-48 md:h-56 bg-gray-200 flex items-center justify-center text-gray-400 overflow-hidden">
+                        <span class="w-full h-full transform transition-transform duration-700 hover:scale-110"><img src="https://images.unsplash.com/photo-1553002929-6bd5e66ad04a?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="foto-cavaco" class="w-full h-full object-cover"></span>
                     </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-bold text-verde-escuro mb-3">Cavaco e Biomassa</h3>
-                        <p class="text-gray-600 leading-relaxed mb-6 text-lg">Fornecimento contínuo de cavaco de madeira com granulometria e umidade controladas, garantindo alto poder calorífico para caldeiras e geração de energia limpa.</p>
-                        <ul class="text-base text-gray-600 space-y-2">
+                    <div class="p-6 md:p-8">
+                        <h3 class="text-xl md:text-2xl font-bold text-verde-escuro mb-3">Cavaco e Biomassa</h3>
+                        <p class="text-gray-600 leading-relaxed mb-6 text-base md:text-lg">Fornecimento contínuo de cavaco de madeira com granulometria e umidade controladas, garantindo alto poder calorífico para caldeiras e geração de energia limpa.</p>
+                        <ul class="text-sm md:text-base text-gray-600 space-y-2">
                             <li><span class="text-verde-claro font-bold mr-2">✓</span>Alto rendimento energético</li>
                             <li><span class="text-verde-claro font-bold mr-2">✓</span>Redução de emissões poluentes</li>
                             <li><span class="text-verde-claro font-bold mr-2">✓</span>Logística eficiente para indústrias</li>
@@ -80,15 +80,20 @@
         </div>
     </section>
 
-    <footer class="bg-gray-900 text-white py-12 border-t-4 border-verde-claro">
+    <footer class="bg-gray-900 text-white py-8 md:py-12 border-t-4 border-verde-claro">
         <div class="container mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="flex flex-col items-center md:items-start">
-                <img src="static/img/WhatsApp Image 2026-08-21 at 15.38.13.jpeg" alt="Logo Erick Reflorestamento" class="h-12 md:h-16 object-contain bg-white p-2 rounded mb-4">
+                <img src="static/img/WhatsApp Image 2026-08-21 at 15.38.13.jpeg" alt="Logo Erick Reflorestamento" class="h-10 md:h-16 object-contain bg-white p-2 rounded mb-2 md:mb-4">
             </div>
-            <div class="text-center md:text-right text-sm text-gray-400"><p>&copy; 2026 Erick Reflorestamento. Todos os direitos reservados.</p></div>
+            <div class="text-center md:text-right text-xs md:text-sm text-gray-400"><p>&copy; 2026 Erick Reflorestamento. Todos os direitos reservados.</p></div>
         </div>
     </footer>
 
     <script src="static/js/main.js"></script>
+    <script>
+        window.addEventListener('load', function() {
+            if (!window.location.hash) { window.scrollTo(0, 0); }
+        });
+    </script>
 </body>
 </html>
