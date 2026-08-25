@@ -14,7 +14,7 @@
     <!-- Cabeçalho Fixo no Topo -->
     <header class="sticky top-0 z-50 w-full shadow-md">
         <div class="bg-azul-topo text-white text-xs md:text-sm py-2 px-4 md:px-12 flex flex-col md:flex-row justify-between md:justify-end items-center gap-2 md:gap-4 border-b border-blue-900 md:border-none">
-            <div class="flex items-center gap-2"><span>📞 +55 (98) 98400-0545 | +55 (98) 98436-5611</span></div>
+            <div class="flex items-center gap-2"><span>📞 +55(98)970225881 | +55(98)97022-5881</span></div>
             <div class="flex items-center gap-2"><span>✉️ jordan.monteles@hotmail.com</span></div>
         </div>
 
@@ -23,6 +23,10 @@
                 <a href="index.html"><img src="static/img/WhatsApp Image 2026-08-21 at 15.38.13.jpeg" alt="Logo" class="h-16 md:h-24 object-contain transition-transform hover:scale-105"></a>
                 <button onclick="toggleMobileMenu()" class="md:hidden text-verde-escuro focus:outline-none"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
                 <ul id="nav-links" class="hidden absolute top-full left-0 w-full bg-white shadow-md md:shadow-none md:static md:w-auto md:bg-transparent md:flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 space-x-0 md:space-x-8 text-gray-700 font-medium text-lg p-6 md:p-0 border-t md:border-none">
+                    
+                    <!-- Botão Início -->
+                    <li class="w-full md:w-auto"><a href="index.html" class="block w-full flex justify-between items-center hover:text-verde-claro transition-colors">Início</a></li>
+                    
                     <li class="w-full md:w-auto"><button onclick="toggleMenu('menu-empresa')" class="w-full flex justify-between items-center hover:text-verde-claro transition-colors">A Empresa <span class="ml-1 text-xs">▼</span></button></li>
                     <li class="w-full md:w-auto"><button onclick="toggleMenu('menu-solucoes')" class="w-full flex justify-between items-center hover:text-verde-claro transition-colors">Nossas Soluções <span class="ml-1 text-xs">▼</span></button></li>
                     <li class="w-full md:w-auto"><a href="contato.html" class="block w-full text-verde-claro">Contato</a></li>
@@ -73,7 +77,12 @@
                             <div class="w-10 h-10 md:w-12 md:h-12 bg-verde-claro/10 text-verde-claro rounded-full flex items-center justify-center text-lg md:text-xl shrink-0">📞</div>
                             <div class="ml-4">
                                 <h4 class="text-lg md:text-xl font-bold text-gray-800">Telefones</h4>
-                                <p class="text-gray-600 mt-1 text-sm md:text-base">+55 (98) 98400-0545<br>WhatsApp: +55 (98) 98436-5611</p>
+                                <p class="text-gray-600 mt-1 text-sm md:text-base">
+                                    +55 (98) 98400-0545<br>
+                                    <a href="https://wa.me/5598970225881" target="_blank" rel="noopener noreferrer" class="hover:text-verde-claro transition-colors">
+                                        WhatsApp: +55 (98) 97022-5881
+                                    </a>
+                                </p>
                             </div>
                         </div>
 
@@ -81,7 +90,9 @@
                             <div class="w-10 h-10 md:w-12 md:h-12 bg-verde-claro/10 text-verde-claro rounded-full flex items-center justify-center text-lg md:text-xl shrink-0">✉️</div>
                             <div class="ml-4">
                                 <h4 class="text-lg md:text-xl font-bold text-gray-800">E-mail</h4>
-                                <p class="text-gray-600 mt-1 text-sm md:text-base">jordan.monteles@hotmail.com</p>
+                                <a href="mailto:jordan.monteles@hotmail.com" class="text-gray-600 mt-1 text-sm md:text-base hover:text-verde-claro transition-colors block">
+                                    jordan.monteles@hotmail.com
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -91,7 +102,7 @@
                 <div class="bg-gray-50 p-6 md:p-10 rounded-lg border border-gray-100 shadow-sm reveal opacity-0 translate-y-10 transition-all duration-700 ease-out" style="transition-delay: 200ms;">
                     <h3 class="text-xl md:text-2xl font-bold text-verde-escuro mb-6">Envie uma Mensagem</h3>
                     
-                    <form action="#" method="POST" class="space-y-4 md:space-y-5 flex flex-col h-full">
+                    <form id="form-contato" class="space-y-4 md:space-y-5 flex flex-col h-full">
                         <div>
                             <label for="nome" class="block text-sm font-medium text-gray-700 mb-1">Nome Completo / Empresa</label>
                             <input type="text" id="nome" name="nome" class="w-full px-4 py-2.5 md:py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-verde-claro focus:border-transparent transition-all" placeholder="Seu nome ou nome da empresa" required>
@@ -111,9 +122,9 @@
                         <div>
                             <label for="assunto" class="block text-sm font-medium text-gray-700 mb-1">Assunto</label>
                             <select id="assunto" name="assunto" class="w-full px-4 py-2.5 md:py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-verde-claro focus:border-transparent transition-all">
-                                <option value="orcamento">Solicitar Orçamento</option>
-                                <option value="duvida">Dúvida Geral</option>
-                                <option value="parceria">Seja um Parceiro</option>
+                                <option value="Solicitar Orçamento">Solicitar Orçamento</option>
+                                <option value="Dúvida Geral">Dúvida Geral</option>
+                                <option value="Seja um Parceiro">Seja um Parceiro</option>
                             </select>
                         </div>
 
@@ -123,7 +134,7 @@
                         </div>
 
                         <button type="submit" class="w-full bg-verde-escuro text-white font-bold py-3 px-6 rounded hover:bg-verde-claro transition-colors duration-300 shadow-md mt-4">
-                            Enviar Mensagem
+                            Enviar Mensagem via WhatsApp
                         </button>
                     </form>
                 </div>
@@ -144,6 +155,22 @@
     <script>
         window.addEventListener('load', function() {
             if (!window.location.hash) { window.scrollTo(0, 0); }
+        });
+
+        // Script para redirecionar dados do formulário para o WhatsApp
+        document.getElementById('form-contato').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const telefone = document.getElementById('telefone').value;
+            const assunto = document.getElementById('assunto').value;
+            const mensagem = document.getElementById('mensagem').value;
+
+            const texto = `Olá! Vim pelo site da Erick Reflorestamento.%0A%0A*Nome:* ${encodeURIComponent(nome)}%0A*E-mail:* ${encodeURIComponent(email)}%0A*Telefone:* ${encodeURIComponent(telefone)}%0A*Assunto:* ${encodeURIComponent(assunto)}%0A*Mensagem:* ${encodeURIComponent(mensagem)}`;
+
+            const numeroWhatsapp = "5598970225881";
+            window.open(`https://wa.me/${numeroWhatsapp}?text=${texto}`, '_blank');
         });
     </script>
 </body>
