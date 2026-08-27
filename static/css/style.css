@@ -1,0 +1,111 @@
+html { scroll-behavior: smooth; }
+
+body { min-width: 320px; }
+
+header {
+  box-shadow: 0 4px 18px rgb(11 30 54 / .12);
+}
+
+header nav {
+  border-bottom: 1px solid rgb(44 94 42 / .08);
+}
+
+main > div.bg-verde-escuro {
+  background-image: linear-gradient(120deg, #173d1d, #2C5E2A 58%, #3b762f);
+}
+
+#produtos .flex.flex-col.bg-gray-50,
+#missao .bg-white {
+  border-color: rgb(44 94 42 / .12);
+  border-radius: 1rem;
+  box-shadow: 0 10px 28px rgb(11 30 54 / .07);
+}
+
+#produtos .flex.flex-col.bg-gray-50:hover {
+  border-color: rgb(110 185 54 / .6);
+}
+
+#produtos img {
+  filter: saturate(.9) contrast(1.04);
+}
+
+form {
+  border-top: 4px solid #6EB936;
+}
+
+input, select, textarea {
+  background-color: #fff;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #8a948c;
+}
+
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+footer {
+  background-image: linear-gradient(135deg, #101d19, #17251d);
+}
+
+footer .container {
+  min-height: 5.5rem;
+}
+
+footer .flex > div:first-child {
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  gap: .75rem;
+}
+
+footer .flex > div:first-child::after {
+  content: "Erick Reflorestamento";
+  color: #fff;
+  font-size: .9rem;
+  font-weight: 700;
+  letter-spacing: .01em;
+}
+
+footer img {
+  height: 2.75rem !important;
+  margin-bottom: 0 !important;
+  padding: .35rem !important;
+  box-shadow: 0 6px 16px rgb(0 0 0 / .18);
+}
+
+@media (min-width: 768px) {
+  footer .container { min-height: 6rem; }
+  footer img { height: 3.25rem !important; }
+}
+
+:focus-visible {
+  outline: 3px solid #6EB936;
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  z-index: 100;
+  top: -4rem;
+  left: 1rem;
+  padding: .75rem 1rem;
+  border-radius: 0 0 .5rem .5rem;
+  background: #fff;
+  color: #2C5E2A;
+  font-weight: 700;
+  box-shadow: 0 6px 18px rgb(0 0 0 / .18);
+}
+
+.skip-link:focus { top: 0; }
+
+.hero-dot[aria-current="true"] { transform: scale(1.15); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+  }
+}

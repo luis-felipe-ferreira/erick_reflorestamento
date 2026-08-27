@@ -7,11 +7,17 @@ function toggleMenu(menuId) {
         if (id !== menuId) {
             const menu = document.getElementById(id);
             if(menu) menu.classList.add('hidden');
+            const button = document.querySelector(`[aria-controls="${id}"]`);
+            if (button) button.setAttribute('aria-expanded', 'false');
         }
     });
     
     const menuClicado = document.getElementById(menuId);
-    if(menuClicado) menuClicado.classList.toggle('hidden');
+    if(menuClicado) {
+        menuClicado.classList.toggle('hidden');
+        const button = document.querySelector(`[aria-controls="${menuId}"]`);
+        if (button) button.setAttribute('aria-expanded', String(!menuClicado.classList.contains('hidden')));
+    }
 }
 
 function toggleMobileMenu() {
@@ -19,6 +25,8 @@ function toggleMobileMenu() {
     if (navLinks) {
         navLinks.classList.toggle('hidden');
         navLinks.classList.toggle('flex');
+        const mobileButton = document.getElementById('btn-mobile');
+        if (mobileButton) mobileButton.setAttribute('aria-expanded', String(!navLinks.classList.contains('hidden')));
     }
 }
 
@@ -54,6 +62,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const elementsToReveal = document.querySelectorAll('.reveal');
     elementsToReveal.forEach(el => observer.observe(el));
+
+    document.querySelectorAll('#nav-links a').forEach(link => link.addEventListener('click', () => {
+        const navLinks = document.getElementById('nav-links');
+        if (navLinks && window.innerWidth < 768) {
+            navLinks.classList.add('hidden');
+            navLinks.classList.remove('flex');
+        }
+    }));
+});
+
+window.addEventListener('keydown', function(e) {
+    if (e.key !== 'Escape') return;
+    ['menu-empresa', 'menu-solucoes'].forEach(id => {
+        const menu = document.getElementById(id);
+        if (menu) menu.classList.add('hidden');
+    });
 });
 
 // ==========================================
@@ -75,14 +99,16 @@ function updateHeroCarousel() {
         // Desliza as imagens
         heroSlidesContainer.style.transform = `translateX(-${currentHeroSlide * 100}%)`;
         
-        // Atualiza a cor das bolinhas de paginação
+        // Atualiza a cor das bolinhas de pagina��o
         heroDots.forEach((dot, index) => {
             if (index === currentHeroSlide) {
                 dot.classList.remove('bg-white/50');
                 dot.classList.add('bg-verde-claro');
+                dot.setAttribute('aria-current', 'true');
             } else {
                 dot.classList.remove('bg-verde-claro');
                 dot.classList.add('bg-white/50');
+                dot.setAttribute('aria-current', 'false');
             }
         });
     }
@@ -106,6 +132,7 @@ function prevHeroSlide() {
 
 // Permite clicar direto nas bolinhas
 function goToSlide(index) {
+    if (index < 0 || index >= heroTotalSlides) return;
     currentHeroSlide = index;
     updateHeroCarousel();
     resetHeroTimer();
@@ -116,7 +143,7 @@ function startHeroTimer() {
     heroSlideInterval = setInterval(nextHeroSlide, 6000);
 }
 
-// Reinicia o tempo se o usuário interagir pelas setas ou bolinhas
+// Reinicia o tempo se o usu�rio interagir pelas setas ou bolinhas
 function resetHeroTimer() {
     clearInterval(heroSlideInterval);
     startHeroTimer();
